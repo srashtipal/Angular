@@ -1,0 +1,49 @@
+<mat-card>
+  <h2>Your Profile Details</h2>
+  <mat-card-content>
+    <div class="bootstrap-wrapper">
+      <div class="container">
+        <div class="container text-center">
+          <img src="../../../assets/Profile.png" alt="" class="profile-image">
+
+          <h1 class="mt20">srashti pal</h1>
+        </div>
+
+        <!--fields-->
+        <div class="row">
+          <div class="col-md-10 offset-md-1" >
+            <table class="table">
+              <tr>
+                <th>UserName</th>
+                <th>{{user.userName}}</th>
+              </tr>
+              <tr>
+                <th>UserId</th>
+                <th>{{user.id}}</th>
+              </tr>
+              <tr>
+                <th>Phone</th>
+                <th>{{user.phone}}</th>
+              </tr>
+              <tr>
+                <th>Role</th>
+                <th>{{user.authorities[0].authority}}</th>
+              </tr>
+              <tr>
+                <th>Status</th>
+                <th>{{user.enabled?"ACTIVE":"INACTIVE"}}</th>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </mat-card-content>
+
+  <!--button-->
+  <mat-card-actions class="text-center">
+    <button disabled="true" mat-raised-button color="primary">Update</button>
+    <button disabled="true" mat-raised-button color="accent">SHARE</button>
+  </mat-card-actions>
+</mat-card>
+
